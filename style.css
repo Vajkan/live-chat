@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.chat-box {
+  background-color: #3f3f3f;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #2791cf;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title h1 {
+  font-size: 26px;
+  margin-left: 10px;
+}
+
+/* ---------- .chat-messages ---------- */
+.chat-messages {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #2791cf;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #2791cf;
+  border-radius: 20px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background-color: #1676b3;
+}
+
+.message {
+  display: block;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+}
+
+.message p {
+  margin: 0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.message .author {
+  font-weight: bold;
+  padding: 15px 0 5px;
+}
+
+/* ---------- .message.me ---------- */
+.message.me {
+  display: block;
+  justify-content: flex-end;
+  padding-left: 60%;
+  margin-bottom: 0;
+}
+
+.message.me .author {
+  background: none;
+}
+
+.message.me p {
+  background-color: #2791cf;
+  color: #fff;
+  align-self: flex-end;
+  text-align: right;
+  width: auto;
+  padding: 10px;
+}
+
+.message.me p.author {
+  padding-right: 0;
+}
+
+/* ---------- .message.other ---------- */
+.message.other {
+  display: block;
+  justify-content: flex-start;
+  padding-right: 60%;
+  margin-bottom: 0;
+}
+
+.message.other p {
+  background-color: #e15b64;
+  color: #fff;
+  padding: 10px;
+}
+
+.message.other p.author {
+  padding-left: 0;
+}
+
+.message.other .author {
+  background: none;
+}
+
+/* ---------- .chat-form ---------- */
+.chat-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.chat-form input[type="text"] {
+  font-size: 16px;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 50px 0 0 50px;
+}
+
+.chat-form button {
+  background-color: #2791cf;
+  color: #fff;
+  width: 30%;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+}
